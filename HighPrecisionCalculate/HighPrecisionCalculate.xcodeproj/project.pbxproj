@@ -14,6 +14,7 @@
 		C377DCCD1E58AE2E006E7332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C377DCCB1E58AE2E006E7332 /* LaunchScreen.storyboard */; };
 		C377DCD81E58AE2E006E7332 /* HighPrecisionCalculateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C377DCD71E58AE2E006E7332 /* HighPrecisionCalculateTests.swift */; };
 		C377DCE31E58AE2E006E7332 /* HighPrecisionCalculateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C377DCE21E58AE2E006E7332 /* HighPrecisionCalculateUITests.swift */; };
+		D02CC4D71E617E81006530D8 /* NSDecimalNumber+RewriteOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02CC4D61E617E81006530D8 /* NSDecimalNumber+RewriteOperator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C377DCDE1E58AE2E006E7332 /* HighPrecisionCalculateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HighPrecisionCalculateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C377DCE21E58AE2E006E7332 /* HighPrecisionCalculateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighPrecisionCalculateUITests.swift; sourceTree = "<group>"; };
 		C377DCE41E58AE2E006E7332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02CC4D61E617E81006530D8 /* NSDecimalNumber+RewriteOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumber+RewriteOperator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		C377DCC11E58AE2E006E7332 /* HighPrecisionCalculate */ = {
 			isa = PBXGroup;
 			children = (
+				D02CC4D51E617E70006530D8 /* NSDecimalNumber */,
 				C377DCC21E58AE2E006E7332 /* AppDelegate.swift */,
 				C377DCC41E58AE2E006E7332 /* ViewController.swift */,
 				C377DCC61E58AE2E006E7332 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				C377DCE41E58AE2E006E7332 /* Info.plist */,
 			);
 			path = HighPrecisionCalculateUITests;
+			sourceTree = "<group>";
+		};
+		D02CC4D51E617E70006530D8 /* NSDecimalNumber */ = {
+			isa = PBXGroup;
+			children = (
+				D02CC4D61E617E81006530D8 /* NSDecimalNumber+RewriteOperator.swift */,
+			);
+			name = NSDecimalNumber;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C377DCC51E58AE2E006E7332 /* ViewController.swift in Sources */,
+				D02CC4D71E617E81006530D8 /* NSDecimalNumber+RewriteOperator.swift in Sources */,
 				C377DCC31E58AE2E006E7332 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +524,7 @@
 				C377DCE91E58AE2E006E7332 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C377DCEA1E58AE2E006E7332 /* Build configuration list for PBXNativeTarget "HighPrecisionCalculateTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +533,7 @@
 				C377DCEC1E58AE2E006E7332 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C377DCED1E58AE2E006E7332 /* Build configuration list for PBXNativeTarget "HighPrecisionCalculateUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +542,7 @@
 				C377DCEF1E58AE2E006E7332 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
