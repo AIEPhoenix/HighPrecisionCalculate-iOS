@@ -2,16 +2,17 @@
 
 import UIKit
 
--1.decimalNumberValue()
-let a = 1.6.decimalNumberValue()
-a>3
-a<4
-a>4.5
-a>a
-a==a
-
-a==1.6
-a>=3
-a<=5.6
-
-let result = a.raising(toPower: 2) + 3 * 50
+///Basic
+var x = 1.decimalNumberValue()
+var y = 3.33.decimalNumberValue()
+var z = "a".decimalNumberValue() ?? "1".decimalNumberValue()
+-x
++x
+///Calculate
+//Addition
+x + 1
+x + 1.1
+x++
+++x
+x += 1
+x.stringValue

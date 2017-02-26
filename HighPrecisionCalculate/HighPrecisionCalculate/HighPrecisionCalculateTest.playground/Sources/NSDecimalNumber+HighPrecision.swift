@@ -1,12 +1,18 @@
 //
-//  NSDecimalNumber+RewriteOperator.swift
-//  AIESPStockChart
+//  NSDecimalNumber+HighPrecision.swift
 //
-//  Created by BrianLee on 2017/2/13.
-//  Copyright © 2017年 Artificial Intelligent Endless. All rights reserved.
+//
+//  Created by AIE-iOS on 2017/2/13.
+//  Copyright © 2017年 AIE-iOS. All rights reserved.
 //
 
 import Foundation
+
+#if DEBUG
+fileprivate let kDebugEnvFlag = true
+#else
+fileprivate let kDebugEnvFlag = false
+#endif
 
 public protocol HighPrecisionable {
     func decimalNumberValue() -> NSDecimalNumber
@@ -213,4 +219,58 @@ public func /(lhs: HighPrecisionable, rhs: NSDecimalNumber) -> NSDecimalNumber{
 public func /=(lhs: inout NSDecimalNumber, rhs: NSDecimalNumber){
     lhs = lhs / rhs
 }
-
+///------------------------------------------------------------------
+//MARK:- Rounding
+extension NSDecimalNumber{
+    public func plainRounding(withScale scale: Int16) -> NSDecimalNumber{
+        let roundingBehavior = NSDecimalNumberHandler(roundingMode: .plain,
+                                                      scale: scale,
+                                                      raiseOnExactness: kDebugEnvFlag,
+                                                      raiseOnOverflow: kDebugEnvFlag,
+                                                      raiseOnUnderflow: kDebugEnvFlag,
+                                                      raiseOnDivideByZero: kDebugEnvFlag)
+        return self.rounding(accordingToBehavior: roundingBehavior)
+    }
+    
+    public func upRounding(withScale scale: Int16) -> NSDecimalNumber{
+        let roundingBehavior = NSDecimalNumberHandler(roundingMode: .up,
+                                                      scale: scale,
+                                                      raiseOnExactness: kDebugEnvFlag,
+                                                      raiseOnOverflow: kDebugEnvFlag,
+                                                      raiseOnUnderflow: kDebugEnvFlag,
+                                                      raiseOnDivideByZero: kDebugEnvFlag)
+        return self.rounding(accordingToBehavior: roundingBehavior)
+    }
+    
+    public func downRounding(withScale scale: Int16) -> NSDecimalNumber{
+        let roundingBehavior = NSDecimalNumberHandler(roundingMode: .down,
+                                                      scale: scale,
+                                                      raiseOnExactness: kDebugEnvFlag,
+                                                      raiseOnOverflow: kDebugEnvFlag,
+                                                      raiseOnUnderflow: kDebugEnvFlag,
+                                                      raiseOnDivideByZero: kDebugEnvFlag)
+        return self.rounding(accordingToBehavior: roundingBehavior)
+    }
+    
+    //四舍六入五考虑，五后非零就进一，五后为零看奇偶，五前为偶应舍去，五前为奇要进一
+    public func bankersRounding(withScale scale: Int16) -> NSDecimalNumber{
+        let roundingBehavior = NSDecimalNumberHandler(roundingMode: .bankers,
+                                                      scale: scale,
+                                                      raiseOnExactness: kDebugEnvFlag,
+                                                      raiseOnOverflow: kDebugEnvFlag,
+                                                      raiseOnUnderflow: kDebugEnvFlag,
+                                                      raiseOnDivideByZero: kDebugEnvFlag)
+        return self.rounding(accordingToBehavior: roundingBehavior)
+    }
+}
+///------------------------------------------------------------------
+//MARK: Other
+public func floor(decimalNumber: NSDecimalNumber) -> NSDecimalNumber{
+    return floor(decimalNumber.doubleValue).decimalNumberValue()
+}
+public func ceil(decimalNumber: NSDecimalNumber) -> NSDecimalNumber{
+    return ceil(decimalNumber.doubleValue).decimalNumberValue()
+}
+public func %(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber{
+    return lhs.doubleValue.truncatingRemainder(dividingBy: rhs.doubleValue).decimalNumberValue()
+}

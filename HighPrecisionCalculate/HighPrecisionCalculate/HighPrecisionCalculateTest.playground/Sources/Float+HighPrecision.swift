@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Double: HighPrecisionable{
+extension Float: HighPrecisionable{
     public func decimalNumberValue() -> NSDecimalNumber{
         return NSDecimalNumber(value: self)
     }
