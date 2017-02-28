@@ -6,6 +6,10 @@ import UIKit
 var x = 1.decimalNumberValue()
 var y = 3.33.decimalNumberValue()
 var z = "a".decimalNumberValue() ?? "1".decimalNumberValue()
+
+NSDecimalNumber(value: 1.21134550)
+1.21134550.decimalNumberValue()
+
 -x
 +x
 ///Calculate
