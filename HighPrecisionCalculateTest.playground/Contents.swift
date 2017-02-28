@@ -86,3 +86,8 @@ Float(1.2436754).decimalNumberValue().bankersRounding(withScale: 6)
 1.24367550.decimalNumberValue().bankersRounding(withScale: 6)
 1.24367551.decimalNumberValue().bankersRounding(withScale: 6)
 1.2436756.decimalNumberValue().bankersRounding(withScale: 6)
+
+
+3.405649.decimalNumberValue() % 2.decimalNumberValue()
+floor(decimalNumber: 12.2.decimalNumberValue() / 2.11.decimalNumberValue())
+ceil(decimalNumber: 12.2.decimalNumberValue() / 2.11.decimalNumberValue())
