@@ -69,7 +69,7 @@ x /= 1.5
 1.24367551.decimalNumberValue().plainRounding(withScale: 6)
 1.2436756.decimalNumberValue().plainRounding(withScale: 6)
 //     |
-1.2436754.decimalNumberValue().upRounding(withScale: 6)
+1.2436750.decimalNumberValue().upRounding(withScale: 6)
 1.24368550.decimalNumberValue().upRounding(withScale: 6)
 1.24367550.decimalNumberValue().upRounding(withScale: 6)
 1.24367522.decimalNumberValue().upRounding(withScale: 6)
@@ -78,8 +78,8 @@ x /= 1.5
 1.2436754.decimalNumberValue().downRounding(withScale: 6)
 1.24368550.decimalNumberValue().downRounding(withScale: 6)
 1.24367550.decimalNumberValue().downRounding(withScale: 6)
-1.24367522.decimalNumberValue().downRounding(withScale: 6)
-1.24367501.decimalNumberValue().downRounding(withScale: 6)
+1.24367502.decimalNumberValue().downRounding(withScale: 6)
+1.24367571.decimalNumberValue().downRounding(withScale: 6)
 //     |
 Float(1.2436754).decimalNumberValue().bankersRounding(withScale: 6)
 1.24368550.decimalNumberValue().bankersRounding(withScale: 6)
