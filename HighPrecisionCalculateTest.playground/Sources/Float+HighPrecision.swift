@@ -10,6 +10,11 @@ import Foundation
 
 extension Float: HighPrecisionable{
     public func decimalNumberValue() -> NSDecimalNumber{
-        return NSDecimalNumber(value: self)
+        if let decimalValue = String(self).decimalNumberValue(){
+            return decimalValue
+        }else{
+            print("HighPrecisionError: convert Float To DecimalNumber faile!!!")
+            return NSDecimalNumber.zero
+        }
     }
 }
