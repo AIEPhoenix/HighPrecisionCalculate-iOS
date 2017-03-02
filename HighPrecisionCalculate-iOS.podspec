@@ -10,5 +10,6 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '8.0'
   spec.tvos.deployment_target = '9.0'
   spec.requires_arc = true
+  spec.frameworks = "UIKit", "Foundation"
   spec.module_name = 'HighPrecisionCalculate'
 end
