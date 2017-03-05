@@ -7,6 +7,9 @@ var x = 1.decimalNumberValue()
 var y = 3.33.decimalNumberValue()
 var z = "a".decimalNumberValue() ?? "1".decimalNumberValue()
 
+let cgfloat = CGFloat(1.21134550)
+cgfloat.decimalNumberValue()
+
 NSDecimalNumber(value: 1.21134550)
 1.21134550.decimalNumberValue()
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3DD54571E6C5A23006424EB /* CGFloat+HighPrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DD54561E6C5A23006424EB /* CGFloat+HighPrecision.swift */; };
 		C3E4584D1E685A880082B64D /* HighPrecisionCalculate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3E4584B1E685A880082B64D /* HighPrecisionCalculate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3E458591E685AB20082B64D /* Double+HighPrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E458541E685AB20082B64D /* Double+HighPrecision.swift */; };
 		C3E4585A1E685AB20082B64D /* Float+HighPrecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E458551E685AB20082B64D /* Float+HighPrecision.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3DD54561E6C5A23006424EB /* CGFloat+HighPrecision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+HighPrecision.swift"; sourceTree = "<group>"; };
 		C3E458481E685A880082B64D /* HighPrecisionCalculate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HighPrecisionCalculate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E4584B1E685A880082B64D /* HighPrecisionCalculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighPrecisionCalculate.h; sourceTree = "<group>"; };
 		C3E4584C1E685A880082B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				C3E458561E685AB20082B64D /* Int+HighPrecision.swift */,
 				C3E458571E685AB20082B64D /* NSDecimalNumber+HighPrecision.swift */,
 				C3E458581E685AB20082B64D /* String+HighPrecision.swift */,
+				C3DD54561E6C5A23006424EB /* CGFloat+HighPrecision.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E458591E685AB20082B64D /* Double+HighPrecision.swift in Sources */,
+				C3DD54571E6C5A23006424EB /* CGFloat+HighPrecision.swift in Sources */,
 				C3E4585B1E685AB20082B64D /* Int+HighPrecision.swift in Sources */,
 				C3E4585C1E685AB20082B64D /* NSDecimalNumber+HighPrecision.swift in Sources */,
 				C3E4585A1E685AB20082B64D /* Float+HighPrecision.swift in Sources */,
