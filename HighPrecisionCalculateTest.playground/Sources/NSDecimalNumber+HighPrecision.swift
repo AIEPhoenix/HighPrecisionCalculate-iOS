@@ -270,6 +270,9 @@ public func floor(decimalNumber: NSDecimalNumber) -> NSDecimalNumber{
 public func ceil(decimalNumber: NSDecimalNumber) -> NSDecimalNumber{
     return ceil(decimalNumber.doubleValue).decimalNumberValue()
 }
-public func %(lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> NSDecimalNumber{
-    return lhs.doubleValue.truncatingRemainder(dividingBy: rhs.doubleValue).decimalNumberValue()
+
+extension NSDecimalNumber {
+    public func getDecimalSection() -> NSDecimalNumber{
+        return self - self.intValue
+    }
 }
